@@ -16,7 +16,6 @@ services:
 
   web:
     image: termikekhov/api_yamdb:latest
-    #build: ../api_yamdb/
 
     restart: always
 
