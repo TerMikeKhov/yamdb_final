@@ -83,6 +83,18 @@ docker-compose exec web python manage.py collectstatic --no-input
 docker-compose down -v
 ```
 
+## Наполнение базы данных из файла с фикстурами
+
+Для наполнения базы данных из файла с фикстурами необходимо выполнить следующие шаги:
+
+1. До запуска проекта нужно скопировать файл с фикстурами fixtures.json в папку api_yamdb где находится manage.py.
+
+2. После запуска проета  выполнить комманду:
+
+```
+docker-compose exec web python manage.py loaddata fixtures.json
+```
+
 ## Примеры
 
 ### Примеры запросов к API:
